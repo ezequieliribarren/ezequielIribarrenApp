@@ -1,0 +1,76 @@
+.servicios-t-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    height: 50px; /* Ajusta según sea necesario */
+  }
+  
+  .servicios-slider {
+    display: inline-block;
+    animation: slide 10s linear infinite;
+  }
+  
+  .servicio-t {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 1.5rem; /* Ajusta según sea necesario */
+    color: #000; /* Ajusta según sea necesario */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  // SERVICIOS DETAIL
+  
+  .servicios-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .servicio {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  
+  .imagen {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .detalle {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .detalle h3 {
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .detalle p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+  }
+  

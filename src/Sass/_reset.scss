@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+
+    h1{
+        font-family: orbitron;
+        font-size: 3rem;
+        color: white;
+    }
+    
+    h2{
+        color: white;
+    }
+    
+    p{
+        color: white;
+    }
+    
+    a{
+        color: white;
+    }
+}
+
+@font-face {
+    font-family: "orbitron";
+    src: url(/public/fonts/Orbitron-Medium.ttf);
+    font-display: swap;
+}
+
+
+
+body{
+
+}
+
+main{
+    background: #08101F;
+}
+

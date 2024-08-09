@@ -1,0 +1,31 @@
+.container-proyects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .project-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .project-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      
+      
+  }
+  
+
+  
+
