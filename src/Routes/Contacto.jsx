@@ -4,12 +4,12 @@ import Layout from '../Layout/Layout'
 
 const Contacto = () => {
     return (
-        <>
+        <main>
             <Layout>
                 <Formulario />
             </Layout>
 
-        </>
+        </main>
     )
 }
 

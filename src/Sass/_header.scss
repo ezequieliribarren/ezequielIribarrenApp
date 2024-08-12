@@ -1,0 +1,74 @@
+.header-section {
+    background: linear-gradient(135deg, #0a0f29 0%, #020510 100%);
+    color: #fff;
+    padding: 5rem 0;
+}
+
+.headline {
+    padding: 2rem;
+    text-align: center;
+}
+
+.glitch {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    position: relative;
+    color: #00d9ff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: glitch 1s infinite;
+}
+
+.tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+.skills {
+    margin: 1rem 0;
+}
+
+.skill {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #00d9ff;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    text-shadow: 0 0 5px rgba(0, 217, 255, 0.7);
+}
+
+.action-buttons .btn {
+    margin: 0 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.action-buttons .btn-primary {
+    background-color: #00d9ff;
+    border: none;
+}
+
+.action-buttons .btn-outline-light {
+    border: 1px solid #00d9ff;
+    color: #00d9ff;
+    background-color: transparent;
+}
+
+.action-buttons .btn:hover {
+    transform: scale(1.1);
+}
+
+.action-buttons .btn-outline-light:hover {
+    background-color: #00d9ff;
+    color: #fff;
+}

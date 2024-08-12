@@ -5,18 +5,39 @@ const Circles = () => {
     return (
         <div className='languages-container'>
             <div className='circles-container'>
-                <div className="circle">HTML</div>
-                <div className="circle">CSS</div>
-                <div className="circle">Javascript</div>
-                <div className="circle">React Js</div>
-                <div className="circle">Sass</div>
-                <div className="circle">Node Js</div>
+                <div className="circle">
+                     <img src="images/languages/html.png" alt="HTML" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/css.png" alt="CSS" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/js.png" alt="Javascript" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/sass.png" alt="Sass" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/api.png" alt="API Rest" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/node.png" alt="Node-Js" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/sql.png" alt="Mysql" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/react.png" alt="React-Js" />
+                </div>
+                <div className="circle">
+                     <img src="images/languages/wordpress.png" alt="Wordpress" />
+                </div>
             </div>
             <div className="spinner-container">
-                <ClipLoader color="#00DAA6" size={150} speedMultiplier={0.14} />
-                <ClipLoader color="#421466" size={155} speedMultiplier={0.13} />
-                <ClipLoader color="#F8F9FA" size={160} speedMultiplier={0.12} />
-                <ClipLoader color="#00DAA6" size={165} speedMultiplier={0.11} />
+                <ClipLoader className='spinner-line-1' color="#00DAA6" size={225} speedMultiplier={0.14} />
+                <ClipLoader className='spinner-line-2' color="#421466" size={230} speedMultiplier={0.13} />
+                <ClipLoader className='spinner-line-3' color="#F8F9FA" size={235} speedMultiplier={0.12} />
+                <ClipLoader className='spinner-line-4' color="#00DAA6" size={240} speedMultiplier={0.11} />
             </div>
         </div>
 

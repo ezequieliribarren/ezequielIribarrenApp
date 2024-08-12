@@ -1,44 +1,68 @@
 .languages-container {
     position: relative;
-    width: 300px; /* Ajusta según el tamaño total deseado */
-    height: 300px; /* Ajusta según el tamaño total deseado */
+    width: 300px;
+    /* Ajusta según el tamaño total deseado */
+    height: 300px;
+    /* Ajusta según el tamaño total deseado */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.spinner-line-1, .spinner-line-2 , .spinner-line-4,.spinner-line-4 {
+    filter: blur(1px); 
+    transform: scaleX(1.05) skewY(2deg); 
+    border-radius: 50%; 
+}
+
+.spinner-line-1{
+    box-shadow: 0px 0px 8px #00DAA6, 0px 0px 12px #00DAA6; 
+
+}
+.spinner-line-2{
+    box-shadow: 0px 0px 8px #421466, 0px 0px 12px #421466; 
+
+}
+.spinner-line-3{
+    box-shadow: 0px 0px 8px #a1a1a1, 0px 0px 12px #a1a1a1; 
+
+}
+.spinner-line-4{
+    box-shadow: 0px 0px 8px #00DAA6, 0px 0px 12px #00DAA6; 
+
+}
 
 .spinner-container {
     position: absolute;
-    width: 100%;  /* Tamaño del contenedor para el spinner más grande */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.spinner-container > * {
+.spinner-container>* {
     position: absolute;
 }
 
-.spinner-container > :nth-child(1) {
+.spinner-container> :nth-child(1) {
     left: 22%;
-    transform: translate(-50%, -50%) rotateY(180deg); /* Voltea verticalmente */
+    transform: translate(-50%, -50%) rotateY(180deg);
     z-index: 1;
 }
 
-.spinner-container > :nth-child(2) {
+.spinner-container> :nth-child(2) {
     left: 20%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
 
-.spinner-container > :nth-child(3) {
+.spinner-container> :nth-child(3) {
     left: 18%;
-    transform: translate(-50%, -50%) rotateY(180deg); /* Voltea verticalmente */
+    transform: translate(-50%, -50%) rotateY(180deg);
     z-index: 3;
 }
 
-.spinner-container > :nth-child(4) {
+.spinner-container> :nth-child(4) {
     left: 16%;
     transform: translate(-50%, -50%);
     z-index: 4;
@@ -53,17 +77,90 @@
     align-items: center;
 }
 
+
+@keyframes shadow-pulse {
+    0%, 100% {
+        box-shadow: 0px 0px 4cap #421466, 0px 0px 4px #00DAA6;
+    }
+    50% {
+        box-shadow: 0px 0px 16px #421466, 0px 0px 16px #00DAA6;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
 .circle {
     position: absolute;
-    width: 30px; /* Tamaño de los círculos fijos */
-    height: 30px; /* Tamaño de los círculos fijos */
-    background-color: #ccc; /* Color de los círculos fijos */
+    width: 3rem;
+    height: 3rem;
+
+
+}
+
+.circle img {
+    width: 4.5rem;
+    animation: scale 2s infinite, shadow-pulse 2s infinite;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 15px rgba(255, 255, 255, 0.5);
     border-radius: 50%;
 }
 
-.circle:nth-child(1) { transform: rotate(0deg) translateX(80px) rotate(100deg); }
-.circle:nth-child(2) { transform: rotate(60deg) translateX(90px) rotate(-100deg); }
-.circle:nth-child(3) { transform: rotate(120deg) translateX(103px) rotate(-100deg); }
-.circle:nth-child(4) { transform: rotate(180deg) translateX(108px) rotate(-100deg); }
-.circle:nth-child(5) { transform: rotate(240deg) translateX(95px) rotate(-100deg); }
-.circle:nth-child(6) { transform: rotate(300deg) translateX(90px) rotate(-100deg); }
+.circle:nth-child(1) {
+    transform: translateX(80px);
+    top: 70%;
+    right: 30%;
+}
+
+.circle:nth-child(2) {
+    transform: translateX(90px);
+    top: 87%;
+    right: 61%;
+}
+
+.circle:nth-child(3) {
+    transform: translateX(105px);
+    top: 85%;
+    right: 98%;
+}
+
+.circle:nth-child(4) {
+    transform: translateX(110px);
+    top: 64%;
+    right: 120%;
+}
+
+.circle:nth-child(5) {
+    transform: translateX(100px);
+    top: 35%;
+    right: 120%;
+}
+
+.circle:nth-child(6) {
+    transform: translateX(95px);
+    top: -1%;
+    right: 69%;
+}
+
+.circle:nth-child(7) {
+    transform: translateX(95px);
+    top: 6%;
+    right: 100%;
+}
+
+.circle:nth-child(8) {
+    transform: translateX(95px);
+    top: 12%;
+    right: 38%;
+}
+
+.circle:nth-child(9) {
+    transform: translateX(95px);
+    top: 40%;
+    right: 25%;
+}

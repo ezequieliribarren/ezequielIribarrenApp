@@ -3,9 +3,9 @@ import ServiciosDetail from '../Components/ServiciosDetail/ServiciosDetail'
 
 const Servicios = () => {
   return (
-    <div>
+    <main>
         <ServiciosDetail/>
-    </div>
+    </main>
   )
 }
 

@@ -3,9 +3,9 @@ import Proyects from '../Components/Proyects/Proyects'
 
 const Proyectos = () => {
   return (
-    <div>
+    <main>
         <Proyects/>
-    </div>
+    </main>
   )
 }
 
