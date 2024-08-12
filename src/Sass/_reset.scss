@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,7 +6,19 @@
 
 html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100% !important;
+}
 
 
     h1{
@@ -26,7 +38,7 @@ html {
     a{
         color: white;
     }
-}
+
 
 @font-face {
     font-family: "orbitron";
@@ -40,12 +52,6 @@ html {
     font-display: swap;
 }
 
-
-
-
-body{
-
-}
 
 main{
     background: #08101F;
