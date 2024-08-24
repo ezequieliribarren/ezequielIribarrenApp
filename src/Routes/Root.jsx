@@ -3,6 +3,8 @@ import Layout from '../Layout/Layout'
 import Header from '../Components/Header/Header'
 import ServiciosT from '../Components/ServiciosT/ServiciosT'
 import Formulario from '../Components/Formulario/Formulario'
+import CallActionProyects from '../Components/CallActionProyects/CallActionProyects';
+
 
 
 const Root = () => {
@@ -10,8 +12,9 @@ const Root = () => {
         <Layout>
             <main>
                 <Header />
-                <ServiciosT/>
+                <CallActionProyects />     
                 <Formulario/>
+                <ServiciosT/>
             </main>
 
         </Layout>

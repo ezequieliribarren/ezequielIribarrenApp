@@ -1,31 +1,113 @@
+/* Estilo para la cuadrícula de proyectos */
 .container-proyects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  margin-top: 10rem;
+  columns: 5 320px;
+  column-gap: 0.5em;
+}
 
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-      }
+/* Estilo para las tarjetas de proyecto */
+.project-card {
+  margin-bottom: 0.5em;
+  width: 100%;
+  overflow: hidden; /* Asegura que el zoom no afecte el contenedor */
+}
 
-      .project-card {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 10px;
-        text-align: center;
-      }
-      
-      .project-card img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-      }
-      
-      
+/* Estilo para las imágenes dentro de las tarjetas */
+.project-card img {
+  width: 100%;
+  transition: transform 0.3s ease; /* Añade una transición suave para el efecto de zoom */
+}
+
+/* Efecto de zoom en las imágenes al hacer hover */
+.project-card:hover img {
+  transform: scale(1.1); /* Escala la imagen al 110% */
+}
+
+
+
+
+/* CALL ACTION PROJECTS */
+.container-call-action-proyects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  margin-bottom: 8rem;
+
+  h2{
+    padding-bottom: 10rem;
   }
-  
+}
 
-  
+.call-action-proyects {
+  display: flex;
+  width: 80%;
+  height: 20rem;
+  position: relative;
+}
+
+.call-action-proyects .skill {
+  width: 200px;
+  height: 200px;
+  border: solid 1px white;
+  margin: 0 1rem;
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #00ffff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+  transform: rotate(-45deg); /* Rotación para el efecto diagonal */
+}
+
+.call-action-proyects .skill h3 {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+
+}
+
+.skill-description {
+  transform: rotate(0deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-top: 2px solid #00ffff;
+  z-index: 2;
+  transform: translateY(100%); /* Ocultar inicialmente la descripción debajo del contenedor */
+}
+
+.call-action-proyects .skill:hover {
+  width: 600px;
+  opacity: 1;
+  filter: contrast(120%);
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+}
+
+.call-action-proyects .skill:hover  {
+  transform: rotate(0deg); /* Rotación para el efecto diagonal */
+
+}
+
+
+.call-action-proyects .skill:hover .skill-description {
+  opacity: 1;
+  transform: translateY(0); /* Mostrar la descripción */
+}
 

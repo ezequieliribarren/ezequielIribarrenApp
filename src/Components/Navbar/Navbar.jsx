@@ -4,8 +4,11 @@ import { HashLink as Link } from 'react-router-hash-link';
 const Navbar = () => {
   return (
     <div className='navegacion'>
+      <div className='logo-navbar'>
+    <img src="images/logo.png" alt="Logo Ezequiel Iribarren" />
+      </div>
       <div>
-        <h1>Ezequiel Iribarren</h1>
+        
       </div>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">

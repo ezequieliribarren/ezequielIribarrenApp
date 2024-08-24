@@ -28,7 +28,12 @@ body {
     }
     
     h2{
-        color: white;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 3rem !important;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #00d9ff !important;
+        text-shadow: 0 0 10px #00DAA6 !important;
     }
     
     p{
@@ -37,6 +42,7 @@ body {
     
     a{
         color: white;
+        text-decoration: none !important;
     }
 
 
