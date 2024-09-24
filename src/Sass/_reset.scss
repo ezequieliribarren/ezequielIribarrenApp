@@ -53,6 +53,12 @@ body {
 }
 
 @font-face {
+    font-family: "rajdhani";
+    src: url(/public/fonts/Rajdhani-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
     font-family: "start";
     src: url(/public/fonts/PressStart2P-Regular.ttf);
     font-display: swap;

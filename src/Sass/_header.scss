@@ -88,22 +88,96 @@
     }
 }
 
-/* Drop zone with hover effect */
-.drop-zone {
-    width: 100px;
-    height: 100px;
-    border: 2px dashed #00d9ff;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    transition: background-color 0.3s ease;
+// /* Drop zone with hover effect */
+// .drop-zone {
+//     width: 100px;
+//     height: 100px;
+//     border: 2px dashed #00d9ff;
+//     background-color: rgba(0, 0, 0, 0.3);
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     z-index: 2;
+//     transition: background-color 0.3s ease;
+// }
+
+// .drop-zone:hover {
+//     background-color: rgba(0, 0, 0, 0.5);
+// }
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+  padding: 20px;
 }
 
-.drop-zone:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+.animated-title {
+  position: relative;
+  font-size: 1.9rem; /* Ajusta el tamaño según tu preferencia */
+  padding: 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-family: rajdhani;
+  border: 1px solid; /* Solo tendrá borde */
+  animation: slideUp 0.5s ease-in-out;
+  width: auto;
+  margin: 1rem 0;
+}
+
+
+.animated-title:nth-child(1) {
+  border-color: #00DAA6;
+  box-shadow: 0 0 15px #00DAA6, 0 0 30px #00DAA6;
+}
+.animated-title:nth-child(2) {
+  border-color: #421466;
+  box-shadow: 0 0 15px #421466, 0 0 30px #421466;
+}
+.animated-title:nth-child(3) {
+  border-color: #a1a1a1;
+  box-shadow: 0 0 15px #a1a1a1, 0 0 30px #a1a1a1;
+}
+.animated-title:nth-child(4) {
+  border-color: #00d9ff;
+  box-shadow: 0 0 15px #00d9ff, 0 0 30px #00d9ff;
+}
+
+.animated-title:nth-child(5) {
+  border-color: #a1a1a1;
+  box-shadow: 0 0 15px #a1a1a1, 0 0 30px #a1a1a1;
+}
+
+.animated-title:nth-child(5):hover {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #00d9ff;
+  cursor: pointer;
+}
+
+
+/* Efecto de brillo */
+@keyframes glow {
+  from {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  to {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Animación de subida */
+@keyframes slideUp {
+  from {
+      transform: translateY(50%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
 }
