@@ -70,22 +70,4 @@ textarea {
     resize: none;
 }
 
-button {
-    width: 15rem;
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    font-family: 'Orbitron', sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #ff00ff, #00d9ff);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
-}
 
-button:hover {
-    background: linear-gradient(135deg, #00d9ff, #ff00ff);
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.8);
-}

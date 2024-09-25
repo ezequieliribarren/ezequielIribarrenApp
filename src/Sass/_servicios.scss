@@ -1,4 +1,7 @@
 /* Estilo para la cuadrícula de servicios */
+#servicios{
+  padding-top: 10rem;
+}
 .servicios-container {
   display: flex;
   flex-direction: column;
@@ -8,41 +11,48 @@
 /* Estilo para cada servicio */
 .servicio {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  padding: 20px 0;
+  height: 35rem;
+  padding: 2rem 0;
 }
 
 /* Estilo para la imagen del servicio */
 .imagen {
-  flex: 1;
-  padding-right: 20px;
+width: 30%;
+height: 100%;
+
 }
 
 .imagen img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 5px;
 }
 
 /* Estilo para los detalles del servicio */
 .detalle {
-  flex: 2;
+ width: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-left: 2rem;
 }
 
-.detalle h3 {
+.detalle h2 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.8rem;
   margin-bottom: 10px;
+  color: white;
+  text-align: left;
 }
 
 .detalle p {
   margin: 0;
-  font-size: 1em;
-  color: #666;
+  font-size: 1.6rem;
+  color: white;
+  width: 85%;
+  line-height: 2.7rem;
 }
 
 /* Estilo para la franja horizontal futurista */
@@ -50,7 +60,7 @@
   width: 100%;
   height: 4px; /* Altura de la franja */
   background: linear-gradient(90deg, #ff00ff, #00ffff); /* Gradiente futurista */
-  margin: 2rem 0;
+  margin: 3rem 0;
   position: relative;
   overflow: hidden;
 }

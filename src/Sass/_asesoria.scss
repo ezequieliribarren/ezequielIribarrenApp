@@ -1,0 +1,45 @@
+$section-padding: 4rem 2rem;
+$background-color: #08101F;
+$text-color: #fff;
+$font-family-rajdhani: 'Rajdhani', sans-serif;
+$font-family-orbitron: 'Orbitron', sans-serif;
+$button-background: linear-gradient(135deg, #ff00ff, #00d9ff);
+$box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+
+.asesoria-section {
+    padding: $section-padding;
+    background: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+        max-width: 600px;
+        color: $text-color;
+        text-align: center;
+
+        p {
+            font-family: $font-family-rajdhani;
+            font-size: 1.8rem;
+            color: $text-color;
+            margin-bottom: 2rem;
+        }
+
+        .asesoria-btn {
+            width: 18rem;
+            padding: 0.8rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: $font-family-orbitron;
+            color: $text-color;
+            background: $button-background;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: $box-shadow;
+        }
+    }
+}

@@ -2,10 +2,10 @@ import React from 'react';
 
 const CallActionProyects = () => {
     const skills = [
-        { title: 'Comunicación', description: 'Habilidad para transmitir ideas de manera clara y efectiva.' },
-        { title: 'Motivación', description: 'Capacidad para inspirar y mantener el enfoque en los objetivos.' },
-        { title: 'Desarrollo', description: 'Competencia en el desarrollo de soluciones innovadoras.' },
-        { title: 'Superación', description: 'Habilidad para superar desafíos y aprender de ellos.' },
+        { title: 'Comunicación', description: 'Me he desarrollado en profesiones con roles pedagógicos, el entendimiento y poder comunicar de forma clara son vitales para un trabajo en equipo.' },
+        { title: 'Motivación', description: 'Me impulsa la busqueda de nuevos objetivos y retos, tanto personales como profesionales.' },
+        { title: 'Desarrollo', description: 'Al enfrentar problemas, siempre busco nuevas formas de resolverlos, aplicando tanto mis conocimientos como mi capacidad para adaptarme.' },
+        { title: 'Superación', description: 'Me gusta enfrentarme a deasafíos a diario. El esfuerzo y poder alcanzar objetivos, de forma sana, siempre es gratificante.' },
     ];
 
     return (
