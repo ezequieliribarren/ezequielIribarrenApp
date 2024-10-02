@@ -194,3 +194,184 @@
   transform: translateY(0); /* Mostrar la descripción */
 }
 
+
+
+
+// PROYECTOS PARALAX
+
+.proyectos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyecto-description {
+  width: 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.proyecto-parallax {
+  width: 100%;
+  height: 60rem; /* O cualquier altura que necesites */
+  background-size: cover !important;
+
+}
+
+
+.proyecto-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+
+}
+
+.proyecto-content h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.proyecto-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.proyecto-content a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.proyecto-content a:hover {
+  background: #0056b3;
+}
+
+.proyecto-skills img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Estilo inicial para el video, empieza pequeño */
+.video-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: width 1s ease, height 1s ease, bottom 1s ease;
+}
+
+.proyecto-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cuando el usuario baja, agranda el video */
+.proyecto-parallax:hover .video-container {
+  width: 40%;
+  height: 80%;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Para ajustar la descripción en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .proyecto-description {
+    width: 90%; /* Reducir el tamaño de la descripción en pantallas pequeñas */
+  }
+}
+
+
+// PORTFOLIO INTRO
+
+/* Estilo para la pantalla de presentación (100vh) */
+.portfolio-intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0f29 0%, #020510 100%);
+  color: #fff;
+  text-align: center;
+}
+
+
+.intro-content h1 {
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+.intro-content p {
+  font-size: 18px;
+  margin-bottom: 4rem;
+}
+
+.scroll-icon {
+  cursor: pointer;
+  animation: bounce 2s infinite; /* Animación para la flecha */
+}
+
+.scroll-icon {
+  display: block;
+  position: absolute;
+  margin: 0 auto; /* Centra la imagen */
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  animation: bounce 2s infinite ease-in-out;
+  bottom: 20px;
+  right: 50%;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(-20px); /* Mueve la imagen 20px hacia arriba */
+  }
+}
+
+
+.scroll-icon img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Animación para la flecha de scroll */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Asegúrate de que la sección de proyectos se vea bien */
+.proyectos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

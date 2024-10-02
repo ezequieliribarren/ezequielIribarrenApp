@@ -94,3 +94,17 @@ main{
     background: #08101F;
 }
 
+.none-desktop{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+.none-tablet-mobile    {
+    display: none !important;
+}
+
+.none-desktop{
+    display: block !important;
+}
+}

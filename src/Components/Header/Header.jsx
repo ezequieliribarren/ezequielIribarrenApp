@@ -12,19 +12,21 @@ const Header = () => {
     };
 
     return (
-    
-            <section className={`header-section ${isBurning ? 'burning' : ''}`}>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-5 d-flex justify-content-start">
-                            <Circles />
-                        </div>
-                        <div className="col-md-7">
-             <About/>
-                        </div>
+
+        <section className={`header-section ${isBurning ? 'burning' : ''}`}>
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-lg-5 d-flex justify-content-center">
+                        <Circles />
+                    </div>
+                    <div className="col-lg-7 d-flex justify-content-center">
+                        <About />
+                    </div>
+                    <div className="col-lg-7 d-flex justify-content-center">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
     );
 };

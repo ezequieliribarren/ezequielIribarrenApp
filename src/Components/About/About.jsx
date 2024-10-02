@@ -5,8 +5,7 @@ const About = () => {
     "Hola! Soy Ezequiel Iribarren",
     "Hace más de 3 años me dedico a realizar aplicaciones y sitios web",
     "Soy docente y brindo talleres de desarrollo web",
-    "Trabajo a diario con profesionales del diseño y del marketing",
-    "Visitá mi portfolio"
+    "Trabajo a diario con profesionales del diseño y del marketing"
   ]; // Los títulos que alternarán
   const [displayedTitles, setDisplayedTitles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +23,7 @@ const About = () => {
   }, [currentIndex, titles]);
 
   return (
-    <div className="title-container">
+    <div className="title-container none-tablet-mobile ">
       {displayedTitles.map((title, index) => (
         <h1 key={index} className="animated-title" data-text={title}>
           {title}
