@@ -80,5 +80,13 @@
 
   .about-cel {
     display: inherit;
+    display: flex;
+    flex-direction: column;
+.about-slide{
+  height: 15rem;
+}
+    .about-content{
+     height: 10rem !important;
+    }
   }
 }
