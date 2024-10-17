@@ -1,8 +1,11 @@
 .servicios-t-container {
   width: 100%;
-  height: 50px; /* Ajusta según sea necesario */
-  width: 100%; /* Ajusta el ancho al contenedor padre */
-  overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+  height: 50px;
+  /* Ajusta según sea necesario */
+  width: 100%;
+  /* Ajusta el ancho al contenedor padre */
+  overflow: hidden;
+  /* Oculta el contenido que se sale del contenedor */
 }
 
 .servicios-slider {
@@ -10,37 +13,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex; 
-  animation: scroll 15s linear infinite; 
+  display: flex;
+  animation: scroll 15s linear infinite;
 }
 
 .servicios-slider-about {
   display: flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap; /* Evita el salto de línea */
-  animation: scroll 10s steps(4) infinite; /* Desplaza cada bloque de texto con pausas */
+  white-space: nowrap;
+  /* Evita el salto de línea */
+  animation: scroll 10s steps(4) infinite;
+  /* Desplaza cada bloque de texto con pausas */
 }
 
 
 .servicio-t {
   padding: 0 15px;
   margin: 0 3rem;
-  font-size: 1.5rem; 
-  color: #ffffff; 
+  font-size: 1.5rem;
+  color: #ffffff;
   font-family: start;
   padding: 0 20px;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%); 
+    transform: translateX(100%);
   }
+
   100% {
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
   }
 }
 
@@ -48,9 +54,12 @@
 
 // #SERVICIOS DETAIL 
 
-#servicios{
+#servicios {
   padding-top: 10rem;
+  background: linear-gradient(135deg, #0a0f29 0%, #020510 100%);
+
 }
+
 .servicios-container {
   display: flex;
   flex-direction: column;
@@ -67,8 +76,8 @@
 
 /* Estilo para la imagen del servicio */
 .imagen {
-width: 30%;
-height: 100%;
+  width: 30%;
+  height: 100%;
 
 }
 
@@ -81,7 +90,7 @@ height: 100%;
 
 /* Estilo para los detalles del servicio */
 .detalle {
- width: 70%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -107,8 +116,9 @@ height: 100%;
 /* Estilo para la franja horizontal futurista */
 .futuristic-divider {
   width: 100%;
-  height: 4px; /* Altura de la franja */
-  background: linear-gradient(90deg, #ff00ff, #00ffff); /* Gradiente futurista */
+  height: 4px;
+  /* Altura de la franja */
+  background: linear-gradient(135deg, #8800ff, #00d9ff);
   margin: 3rem 0;
   position: relative;
   overflow: hidden;
@@ -131,7 +141,88 @@ height: 100%;
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
 }
+
+.detalle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+
+}
+
+.hidde-span, .leer-menos{
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 1000px) {
+
+  .servicio {
+    width: 100%;
+    height: auto;
+    padding: 0 0;
+    justify-content: center !important;
+    align-items: center !important;
+
+    .imagen {
+      width: 100%;
+      height: 25rem;
+
+    }
+
+    p{
+      width: 100%; 
+      
+
+    }      
+    
+    h2{
+      padding: 0 !important;
+      width: 100% !important;
+    }
+  }
+
+   
+  }
+
+
+
+
+
+@media (max-width: 900px) {
+ 
+  .hidde-span {
+    display: inherit !important;
+    color: #00d9ff;
+    font-size: 1.4rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .servicio{
+    h2{
+      font-size: 2.2rem !important;
+      
+    }
+
+    p{
+      font-size: 1.4rem !important;
+    }
+  }
+}
+
+.hidde-span{
+  display: none;
+}
+

@@ -2,7 +2,7 @@ const servicios = [
   {
     "imagen": "images/servicios/a-medida.jpg",
     "titulo": "Diseño y desarrollo de sitio web a medida",
-    "descripcion": "A la hora de crear un sitio web o app web que represente a tu proyecto, empresa o negocio, se deben tener en cuenta muchos aspectos. Desde una investigación de diseño UX que garantice una experiencia de usuario intuitiva, hasta un diseño UI personalizado que permita mostrar la información de manera clara y atractiva. Además, la implementación de un desarrollo optimizado asegura que el sitio sea fluido, rápido y correctamente posicionado en motores de búsqueda, maximizando su impacto."
+    "descripcion": "Crear un sitio o aplicación web a medida implica un proceso integral que comienza con una investigación y un diseño alineado con tu marca o proyecto. Esta etapa se centra en la experiencia del usuario (UX) y la interfaz de usuario (UI). Luego avanzamos hacia el desarrollo, donde aplicamos las tecnologías y lenguajes más adecuados para optimizar el rendimiento del sitio y mejorar su visibilidad en los motores de búsqueda."
   }
   ,
   {

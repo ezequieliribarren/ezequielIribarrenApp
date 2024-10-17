@@ -3,14 +3,14 @@ import { Link } from 'react-scroll'; // Para el desplazamiento suave entre secci
 
 const PortfolioIntro = () => {
   return (
-    <div className="portfolio-intro">
+    <div className="portfolio-intro" style={{ height: '100vh' }}>
       <div className="intro-content">
         <h1>Bienvenido a mi Portfolio</h1>
-        <p>Desliza hacia abajo para ver mis proyectos</p>
+        <p>Click en la flecha para ver los proyectos</p>
         <Link 
           to="proyectos-section" // ID de la sección de proyectos
           smooth={true}
-          duration={500}
+          duration={600}
           className="scroll-icon"
         >
           <img src="/scroll.png" alt="Scroll" />

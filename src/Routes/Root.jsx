@@ -5,6 +5,8 @@ import ServiciosT from '../Components/ServiciosT/ServiciosT'
 import Formulario from '../Components/Formulario/Formulario'
 import CallActionProyects from '../Components/CallActionProyects/CallActionProyects';
 import AsesoriaDesarrollador from '../Components/AsesoriaDesarrollador/AsesoriaDesarrollador'
+import { proyectos } from '../proyectos';
+
 
 
 
@@ -13,7 +15,7 @@ const Root = () => {
         <Layout>
             <main>
                 <Header />
-                <CallActionProyects />
+                <CallActionProyects proyectos={proyectos} />
                 <AsesoriaDesarrollador/>     
                 <Formulario/>
                 <ServiciosT/>

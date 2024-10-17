@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
 
 const ProyectosParallax = ({ proyectos }) => {
@@ -23,14 +23,24 @@ const ParallaxProyecto = ({ proyecto, index }) => {
     }
   };
 
+  // Crear un array de skills para mapear
+  const skills = [
+    { img: proyecto.skill1, name: proyecto.skill1name },
+    { img: proyecto.skill2, name: proyecto.skill2name },
+    { img: proyecto.skill3, name: proyecto.skill3name },
+    { img: proyecto.skill4, name: proyecto.skill4name },
+    { img: proyecto.skill5, name: proyecto.skill5name },
+  ];
+
   return (
-<Parallax
-  strength={strength}
-  className="proyecto-parallax"
-  style={{
-    backgroundImage: `url(${proyecto.img})`,  // Establece la imagen de fondo
-  }}
->
+    <Parallax
+      strength={strength}
+      bgImage={proyecto.img}
+      className="proyecto-parallax"
+      style={{
+        backgroundImage: `url(${proyecto.img})`,  // Establece la imagen de fondo
+      }}
+    >
       <div className="proyecto-content">
         {/* Descripción con animación dinámica */}
         <div 
@@ -40,15 +50,12 @@ const ParallaxProyecto = ({ proyecto, index }) => {
           <h3>{proyecto.title}</h3>
           <p>{proyecto.description}</p>
           <div className="proyecto-skills">
-            <img src={proyecto.skill1} alt={proyecto.skill1name} />
-            <img src={proyecto.skill2} alt={proyecto.skill2name} />
-            <img src={proyecto.skill3} alt={proyecto.skill3name} />
-            <img src={proyecto.skill4} alt={proyecto.skill4name} />
-            <img src={proyecto.skill5} alt={proyecto.skill5name} />
+            {skills.map((skill, i) => (
+              skill.img ? ( // Verifica si la imagen de la habilidad existe
+                <img key={i} src={skill.img} alt={skill.name} />
+              ) : null
+            ))}
           </div>
-          <a href={proyecto.link} target="_blank" rel="noopener noreferrer">
-            Ver Proyecto
-          </a>
         </div>
 
         {/* Video */}

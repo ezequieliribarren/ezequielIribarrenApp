@@ -1,26 +1,73 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const CallActionProyects = () => {
-    const skills = [
-        { title: 'Comunicación', description: 'Me he desarrollado en profesiones con roles pedagógicos, el entendimiento y poder comunicar de forma clara son vitales para un trabajo en equipo.' },
-        { title: 'Motivación', description: 'Me impulsa la busqueda de nuevos objetivos y retos, tanto personales como profesionales.' },
-        { title: 'Desarrollo', description: 'Al enfrentar problemas, siempre busco nuevas formas de resolverlos, aplicando tanto mis conocimientos como mi capacidad para adaptarme.' },
-        { title: 'Superación', description: 'Me gusta enfrentarme a deasafíos a diario. El esfuerzo y poder alcanzar objetivos, de forma sana, siempre es gratificante.' },
-    ];
+const CallActionProyects = ({ proyectos = [] }) => {
+    const [randomProyectos, setRandomProyectos] = useState([]);
+
+    useEffect(() => {
+        if (proyectos.length > 0) {
+            const getLatestProjects = (array) => {
+                // Ordenar proyectos por fecha (asumiendo que 'fecha' es una propiedad de tus proyectos)
+                return array.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+            };
+
+            const latestProjects = getLatestProjects(proyectos).slice(0, 5);
+            setRandomProyectos(latestProjects);
+        }
+    }, [proyectos]);
+
+    // Configuración para Slick Slider
+    const settings = {
+        dots: true,
+        arrows: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,  // Mostrar 3 proyectos a la vez
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     return (
-        <section className='container-call-action-proyects container-fluid'>
-           <h2>Habilidades</h2>   
-            <div className='call-action-proyects'>
-                {skills.map((skill, index) => (
-                    <div className='skill' key={index}>
-                        <h3>{skill.title}</h3>
-                        <p className='skill-description'>{skill.description}</p>
+        <section className="container-fluid portfolio-preview">
+            <h2>Ultimos proyectos</h2>
+            <Slider {...settings} className='slider-proyects'>
+                {randomProyectos.map((proyecto) => (
+                    <div key={proyecto.id} className="grid-item">
+                        <div className="image-container">
+                            <img src={proyecto.img} alt={proyecto.title} className="project-image" />
+                            <div className="overlay">
+                                <h3 className="project-title">{proyecto.title}</h3>
+                            </div>
+                        </div>
                     </div>
                 ))}
-            </div>
+                <div className="grid-item">
+                    <div className="view-portfolio">
+                        <h3>VER PORTFOLIO</h3>
+                    </div>
+                </div>
+            </Slider>
         </section>
     );
-}
+};
 
 export default CallActionProyects;

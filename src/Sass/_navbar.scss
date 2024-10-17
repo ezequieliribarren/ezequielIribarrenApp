@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-z-index: 1111;
+    z-index: 1111;
 
 
     nav {
@@ -79,5 +79,32 @@ z-index: 1111;
         }
     }
 
-    
+
+}
+
+@media (max-width: 1000px) {
+    .navegacion {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        border: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        background: transparent !important;
+        flex-shrink: 0;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        padding-right: 2rem !important;
+
+        .navbar-nav {
+            justify-content: end !important;
+
+        }
+    }
+
+    /* Alinear el botón hamburguesa a la derecha */
+    .navbar-toggler {
+        margin-left: auto;
+    }
 }

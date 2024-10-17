@@ -7,8 +7,7 @@ const AsesoriaDesarrollador = () => {
                 <h2>¿Sos desarrollador web?</h2>
                 <p>¿Querés arrancar un proyecto y no sabés por dónde empezar? Yo también pasé por lo mismo. Agendá una asesoría gratuita, voy a estar encantado de contribuir con mi ayuda.</p>
                 <a className="asesoria-btn" >
-                    Agendar Asesoría
-                </a>
+                    Contactame                </a>
             </div>
         </section>
     );

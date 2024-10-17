@@ -1,215 +1,127 @@
-.container-proyects {
-  padding-top: 10rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila */
-  gap: 50px;
+
+/* CALL ACTION PROJECTS */
+.portfolio-preview{
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);;
+
+  h2{
+    margin-bottom: 2rem;
+  }
 }
-.proyect-card-container{
-  width: 100%;
+
+.slick-dots{
+  button{
+   background: #00d9ff !important;   
+   border-radius: 10px;
+  }
+ li {
+    button {
+      &::before {
+        color: #00d9ff !important;   // Color del punto
+        opacity: 1;       // Asegúrate de que tenga opacidad completa
+      }
+    }
+  }
 }
-.project-card {
+
+.slider-proyects{
+  padding: 2rem 0;
+}
+
+.grid-item {
+  padding: 0.2rem;
+  height: 24rem;
   display: flex;
-  flex-direction: row;
-  height: 30rem; /* Cambiado a 25rem */
-  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  height: 100%;
   position: relative;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .project-image {
-  width: 60%; /* El video ocupa el 60% */
-  height: 100%;
-  overflow: hidden;
-  transition: width 0.3s ease, height 0.3s ease; /* Transición más fluida */
-  position: relative;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.project-info {
-  width: 40%; /* La información ocupa el 40% */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  transition: opacity 0.3s ease;
-  position: relative;
-  z-index: 2; /* Asegura que el contenido siempre esté encima del video inicialmente */
-
-  h3{
-    color: white;
-  }
-  p{
-    font-size: 1.5rem;
-  }
+.image-container:hover .project-image {
+  transform: scale(1.05);
 }
 
-.project-skills{
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  img{
-    margin: 0 0.5rem;
-  }
-
-}
-
-.project-card.hovered .project-image {
-  width: 100%; 
-  height: 100%;
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; 
-}
-
-.project-card.hovered .project-image video {
-  object-fit: cover; /* Ajusta el video al contenedor */
-  width: 100%; /* Ocupar el 100% del ancho */
-  height: 100%; /* Ocupar el 100% del alto */
-}
-
-.project-card.hovered .project-info {
-  display: none; /* Ocultar la información cuando se hace hover */
-}
-
-.project-card.hovered .project-info h3,
-.project-card.hovered .project-info p {
-  color: #000; /* Asegura que el texto sea legible sobre el fondo semi-transparente */
-}
-
-.ver-sitio {
   width: 100%;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  height: 3rem;
-  border: 1px solid transparent; /* Evita que los bordes se hereden de otros estilos */
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white; 
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   display: flex;
   align-items: center;
-
-  a {
-  color: white; 
-  font-size: 1.5rem;
-  width: 100% !important;
-  font-family: orbitron;
-  text-align: center;
-}
-}
-
-
-
-
-
-
-
-/* CALL ACTION PROJECTS */
-.container-call-action-proyects {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 4rem 0;
-  margin-bottom: 8rem;
-
-  h2{
-    padding-bottom: 10rem;
-  }
 }
 
-.call-action-proyects {
-  display: flex;
-  width: 80%;
-  height: 20rem;
-  position: relative;
+.image-container:hover .overlay {
+  opacity: 1;
 }
 
-.call-action-proyects .skill {
-  width: 200px;
-  height: 200px;
-  border: solid 1px white;
-  margin: 0 1rem;
-  flex-grow: 1;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #00ffff;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  transition: width 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
-  transform: rotate(-45deg); /* Rotación para el efecto diagonal */
-}
-
-.call-action-proyects .skill h3 {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.7rem;
-
-}
-
-.skill-description {
-  transform: rotate(0deg);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  padding: 1rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem;
+.project-title {
+  color: white;
+  font-size: 3rem;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  border-top: 2px solid #00ffff;
-  z-index: 2;
-  transform: translateY(100%); /* Ocultar inicialmente la descripción debajo del contenedor */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px);
+  font-family: orbitron;
 }
 
-.call-action-proyects .skill:hover {
-  width: 600px;
+.image-container:hover .project-title {
   opacity: 1;
-  filter: contrast(120%);
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-
+  transform: translateY(0);
 }
 
-.call-action-proyects .skill:hover  {
-  transform: rotate(0deg); /* Rotación para el efecto diagonal */
-
+.view-portfolio {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100% !important;
+  cursor: pointer;
 }
 
-
-.call-action-proyects .skill:hover .skill-description {
-  opacity: 1;
-  transform: translateY(0); /* Mostrar la descripción */
+.view-portfolio h3 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+  font-family: orbitron;
 }
 
-
+.view-portfolio:hover h3 {
+  color: #00d9ff;
+}
 
 
 // PROYECTOS PARALAX
 
-.proyectos-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .proyecto-description {
   width: 50%;
+  border-radius: 3rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1s forwards;
+  background-color: #24243ed8;
 }
 
 @keyframes fadeIn {
@@ -221,8 +133,8 @@
 
 .proyecto-parallax {
   width: 100%;
-  height: 60rem; /* O cualquier altura que necesites */
-  background-size: cover !important;
+  height: 60rem;
+  background-size: contain !important;
 
 }
 
@@ -232,7 +144,7 @@
   align-items: center;
   justify-content: space-between;
   height: 600px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.638);
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -250,19 +162,6 @@
   margin-bottom: 20px;
 }
 
-.proyecto-content a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  background: #007bff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.proyecto-content a:hover {
-  background: #0056b3;
-}
 
 .proyecto-skills img {
   width: 40px;
@@ -295,13 +194,6 @@
   right: 20px;
 }
 
-/* Para ajustar la descripción en pantallas más pequeñas */
-@media (max-width: 768px) {
-  .proyecto-description {
-    width: 90%; /* Reducir el tamaño de la descripción en pantallas pequeñas */
-  }
-}
-
 
 // PORTFOLIO INTRO
 
@@ -329,25 +221,33 @@
 
 .scroll-icon {
   cursor: pointer;
-  animation: bounce 2s infinite; /* Animación para la flecha */
+  animation: bounce 2s infinite;
+  /* Animación para la flecha */
 }
 
 .scroll-icon {
   display: block;
   position: absolute;
-  margin: 0 auto; /* Centra la imagen */
-  width: 50px; /* Ajusta el tamaño según sea necesario */
+  margin: 0 auto;
+  /* Centra la imagen */
+  width: 50px;
+  /* Ajusta el tamaño según sea necesario */
   animation: bounce 2s infinite ease-in-out;
   bottom: 20px;
   right: 50%;
 }
 
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0); /* Posición inicial */
+
+  0%,
+  100% {
+    transform: translateY(0);
+    /* Posición inicial */
   }
+
   50% {
-    transform: translateY(-20px); /* Mueve la imagen 20px hacia arriba */
+    transform: translateY(-20px);
+    /* Mueve la imagen 20px hacia arriba */
   }
 }
 
@@ -361,9 +261,12 @@
 
 /* Animación para la flecha de scroll */
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -374,4 +277,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+
+
+/* Para ajustar la descripción en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .proyecto-description {
+    width: 90%;
+    /* Reducir el tamaño de la descripción en pantallas pequeñas */
+  }
+
+
 }

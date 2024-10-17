@@ -46,19 +46,18 @@ body {
     }
 
     button {
-        width: 18rem;
-        padding: 0.8rem;
-        font-weight: 700;
-        font-size: 1.3rem !important;
+        width: 18rem ;
+        padding: 1rem;
+        font-size: 1.4rem !important;
         font-family: orbitron;
         color: #fff;
-        background: linear-gradient(135deg, #ff00ff, #00d9ff);
+        background: linear-gradient(135deg, #8800ff, #00d9ff);
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: all 0.3s ease;
         margin-top: 1rem;
-        box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+        box-shadow: 0 0 15px rgba(187, 0, 255, 0.8);
     }
     
     button:hover {
@@ -86,10 +85,6 @@ body {
 }
 
 
-main{
-    background: #08101F;
-}
-
 .fondo-main{
     background: #08101F;
 }
@@ -97,6 +92,11 @@ main{
 .none-desktop{
     display: none;
 }
+
+.hidden {
+    display: none;
+  }
+  
 
 @media (max-width: 1000px) {
 
