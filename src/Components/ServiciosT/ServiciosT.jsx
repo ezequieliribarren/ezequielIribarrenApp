@@ -1,22 +1,24 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const servicios = [
   'Sitio web a medida',
-  'Sitio web Wordpress',
+  'Sitio Wordpress',
   'Mantenimiento Web',
+  'Diseño de Ecommerce',
   'Asesorías'
 ];
 
 const ServiciosT = () => {
   return (
     <div className="servicios-t-container">
-      <div className="servicios-slider">
+      <Link to="/servicios" className="servicios-slider">
         {servicios.map((servicio, index) => (
           <div key={index} className="servicio-t">
             {servicio}
           </div>
         ))}
-      </div>
+      </Link>
     </div>
   );
 };

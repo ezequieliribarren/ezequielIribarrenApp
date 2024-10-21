@@ -1,5 +1,4 @@
 $section-padding: 7rem 0;
-$background-color: linear-gradient(135deg, #8800ff, #004268);
 $text-color: #fff;
 $font-family-rajdhani: 'Rajdhani', sans-serif;
 $font-family-orbitron: 'Orbitron', sans-serif;
@@ -8,18 +7,22 @@ $box-shadow: 0 0 15px rgba(187, 0, 255, 0.8);
 
 .asesoria-section {
     padding: $section-padding;
-    background: $background-color;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     .container {
-        max-width: 600px;
+        max-width: 690px;
         color: $text-color;
         text-align: center;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(5px);
+        padding: 2.5rem;
+        border-radius: 10px;
 
-        h2{
+
+        h2 {
             margin-bottom: 2rem;
         }
 
@@ -31,18 +34,23 @@ $box-shadow: 0 0 15px rgba(187, 0, 255, 0.8);
         }
 
         .asesoria-btn {
-            width: 18rem ;
+            width: 18rem;
             padding: 1rem;
             font-size: 1.4rem !important;
             font-family: orbitron;
-            color: #fff;
-            background: linear-gradient(135deg, #8800ff, #00d9ff);
+            color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 1rem;
-            box-shadow: 0 0 15px rgba(187, 0, 255, 0.8);
+            border-radius: 3.75px;
+            background: #CBFC01;
+            box-shadow: 0px 0px 10px 0px rgba(203, 252, 1, 0.80);
+        }
+
+        .asesoria-btn:hover {
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.8);
         }
     }
 }

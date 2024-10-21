@@ -35,13 +35,13 @@ const Navbar = () => {
       </nav>
       <div className='redes'>
         <a className="nav-link" href="https://www.linkedin.com">
-          <img src="images/navbar/linkedin.png" alt="LinkedIn" />
+          <img src="images/linkedin.png" alt="LinkedIn" />
         </a>
         <a className="nav-link" href="https://www.linkedin.com">
-          <img src="images/navbar/instagram.png" alt="LinkedIn" />
+          <img src="images/instagram.png" alt="LinkedIn" />
         </a>
         <a className="nav-link" href="https://www.github.com">
-          <img src="images/navbar/github.png" alt="GitHub" />
+          <img src="images/github.png" alt="GitHub" />
         </a>
       </div>
     </div>

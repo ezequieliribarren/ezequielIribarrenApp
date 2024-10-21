@@ -41,9 +41,9 @@ const ParallaxProyecto = ({ proyecto, index }) => {
         backgroundImage: `url(${proyecto.img})`,  // Establece la imagen de fondo
       }}
     >
-      <div className="proyecto-content">
+      <div className="proyecto-content" id={proyecto.id}>
         {/* Descripción con animación dinámica */}
-        <div 
+        <div
           className="proyecto-description fade-in"
           style={{ animationDelay: `${index * 0.5}s` }} // Añadir un retraso en base al índice del proyecto
         >
@@ -59,18 +59,18 @@ const ParallaxProyecto = ({ proyecto, index }) => {
         </div>
 
         {/* Video */}
-        <div 
+        <div
           className="video-container"
           onAnimationEnd={handleAnimationEnd}
         >
-          <video 
+          <video
             ref={videoRef}
-            className="proyecto-video" 
-            src={proyecto.video} 
-            muted 
-            loop 
+            className="proyecto-video"
+            src={proyecto.video}
+            muted
+            loop
             preload="auto"
-            autoPlay={isVideoPlaying ? 'true' : 'false'}  
+            autoPlay={isVideoPlaying ? 'true' : 'false'}
             controls="true"
             onPlay={() => {
               if (videoRef.current) {

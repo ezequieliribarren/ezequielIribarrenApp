@@ -67,6 +67,19 @@
     z-index: 4;
 }
 
+.img-about {
+position: absolute;
+right: 9%;
+  
+    img {
+      width: 20rem;
+      padding: 1rem;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      border-radius: 50%;
+    //   box-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 20px rgba(0, 217, 255, 0.6), 0 0 40px rgba(0, 217, 255, 0.4);
+      
+    }
+  }
 
 
 @keyframes shadow-pulse {

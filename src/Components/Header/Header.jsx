@@ -16,11 +16,12 @@ const Header = () => {
         <section className={`header-section ${isBurning ? 'burning' : ''}`}>
             <div className="container">
                 <div className="row align-items-center">
+                  <div className="col-lg-5 d-flex justify-content-center">
+                        <Circles />
+                    </div>  
                     <div className="col-lg-7 d-flex justify-content-center">
                         <AboutCel />
-                    </div>  <div className="col-lg-5 d-flex justify-content-center">
-                        <Circles />
-                    </div>
+                    </div>  
 
                 </div>
             </div>

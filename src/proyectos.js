@@ -16,8 +16,9 @@ export const proyectos = [
       skill5: "images/languages/js.png",
       skill5name: "Js",
       video: "images/proyectos/contra.mp4",
-      fecha: "2023-10-30" 
-  },
+      fecha: "2023-10-30",
+      destacado: true,
+     },
   {
       id: 2,
       img: "images/proyectos/baires.png",
@@ -35,7 +36,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "",
-      fecha: "2024-04-22" 
+      fecha: "2024-04-22" ,
+      destacado: true
   },
   {
       id: 3,
@@ -52,7 +54,8 @@ export const proyectos = [
       skill4: "images/languages/react.png",
       skill4name: "React",
       video: "",
-      fecha: "2024-08-16"
+      fecha: "2024-08-16",
+      destacado: true
   },
   {
       id: 4,
@@ -71,7 +74,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "images/proyectos/artanium.mp4",
-      fecha: "2023-08-30"
+      fecha: "2023-08-30",
+      destacado: false
   },
   {
       id: 5,
@@ -90,7 +94,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "",
-      fecha: "2024-08-05" 
+      fecha: "2024-08-05" ,
+      destacado: false
   },
   {
       id: 6,
@@ -109,7 +114,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "",
-      fecha: "2024-09-20" 
+      fecha: "2024-09-20" ,
+      destacado: true
   },
   {
       id: 7,
@@ -130,7 +136,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "images/proyectos/versa.mp4",
-      fecha: "2023-04-08"
+      fecha: "2023-04-08",
+      destacado: false
   },
   {
       id: 8,
@@ -151,7 +158,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "images/proyectos/hoop.mp4",
-      fecha: "2023-06-09" 
+      fecha: "2023-06-09" ,
+      destacado: true
   },
   {
       id: 9,
@@ -170,7 +178,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "images/proyectos/rimmaudo.mp4",
-      fecha: "2023-08-14" 
+      fecha: "2023-08-14" ,
+      destacado: false
   },
   {
       id: 10,
@@ -189,7 +198,8 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "images/proyectos/biondi.mp4",
-      fecha: "2023-05-03"
+      fecha: "2023-05-03",
+      destacado: false
   },
   {
       id: 11,
@@ -207,6 +217,7 @@ export const proyectos = [
       skill5: "images/languages/git.png",
       skill5name: "Git",
       video: "images/proyectos/tobyco.mp4",
-      fecha: "2024-09-15"
+      fecha: "2024-09-15",
+      destacado: false
   }
 ];

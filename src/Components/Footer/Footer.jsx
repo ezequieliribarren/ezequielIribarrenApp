@@ -12,10 +12,10 @@ const Footer = () => {
         </div>
         <div className="footer-social">
           <a className="footer-social-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src="images/navbar/linkedin.png" alt="LinkedIn" />
+            <img src="images/linkedin.png" alt="LinkedIn" />
           </a>
           <a className="footer-social-link" href="https://www.github.com" target="_blank" rel="noopener noreferrer">
-            <img src="images/navbar/github.png" alt="GitHub" />
+            <img src="images/github.png" alt="GitHub" />
           </a>
         </div>
         <div className="footer-author">

@@ -5,7 +5,6 @@ const Formulario = () => {
         <section id='formulario'>
             <h2>Trabajemos en tu proyecto</h2>
             <form className="formulario">
-                <div className='form-part'>
                     <div className="form-group">
                         <label htmlFor="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required />
@@ -14,8 +13,6 @@ const Formulario = () => {
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" name="email" required />
                     </div>
-                </div>
-
                 <div className="form-group">
                     <label htmlFor="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" required></textarea>

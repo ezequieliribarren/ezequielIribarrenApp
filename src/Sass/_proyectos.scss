@@ -1,32 +1,42 @@
-
 /* CALL ACTION PROJECTS */
-.portfolio-preview{
+.portfolio-preview {
   padding-top: 5rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);;
+  padding-bottom: 10rem;
 
-  h2{
-    margin-bottom: 2rem;
+  h2 {
+    margin-bottom: 3rem;
   }
 }
 
-.slick-dots{
-  button{
-   background: #00d9ff !important;   
-   border-radius: 10px;
+.slick-dots {
+  button {
+    background: rgba(255, 255, 255, 0.40) !important;
+    border-radius: 10px;
   }
- li {
+
+  li {
     button {
       &::before {
-        color: #00d9ff !important;   // Color del punto
-        opacity: 1;       // Asegúrate de que tenga opacidad completa
+        color: rgba(125, 125, 125, 0.4) !important; // Color del punto
+        opacity: 1; // Asegúrate de que tenga opacidad completa
       }
     }
   }
 }
 
-.slider-proyects{
+.slick-track {
+  margin-bottom: 2rem;
+}
+
+.slider-proyects {
   padding: 2rem 0;
+
+  .slick-center {
+    border-radius: 10px;
+    border: 2px solid #CBFC01;
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 4px 4px 4px 0px rgba(203, 252, 1, 0.25);
+  }
 }
 
 .grid-item {
@@ -46,16 +56,6 @@
     height: 100%;
     object-fit: contain;
   }
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover .project-image {
-  transform: scale(1.05);
 }
 
 .overlay {
@@ -92,7 +92,7 @@
 }
 
 .view-portfolio {
-  background-color: #000;
+  background: rgba(255, 255, 255, 0.20);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,6 +111,7 @@
 .view-portfolio:hover h3 {
   color: #00d9ff;
 }
+
 
 
 // PROYECTOS PARALAX
@@ -138,7 +139,6 @@
 
 }
 
-
 .proyecto-content {
   display: flex;
   align-items: center;
@@ -162,13 +162,11 @@
   margin-bottom: 20px;
 }
 
-
 .proyecto-skills img {
   width: 40px;
   margin: 0 10px;
 }
 
-/* Estilo inicial para el video, empieza pequeño */
 .video-container {
   position: absolute;
   bottom: 10px;
@@ -186,7 +184,6 @@
   object-fit: cover;
 }
 
-/* Cuando el usuario baja, agranda el video */
 .proyecto-parallax:hover .video-container {
   width: 40%;
   height: 80%;
@@ -197,7 +194,6 @@
 
 // PORTFOLIO INTRO
 
-/* Estilo para la pantalla de presentación (100vh) */
 .portfolio-intro {
   height: 100vh;
   display: flex;
@@ -207,7 +203,6 @@
   color: #fff;
   text-align: center;
 }
-
 
 .intro-content h1 {
   font-size: 48px;
@@ -251,7 +246,6 @@
   }
 }
 
-
 .scroll-icon img {
   width: 50px;
   height: 50px;
@@ -259,7 +253,6 @@
   margin: 0 auto;
 }
 
-/* Animación para la flecha de scroll */
 @keyframes bounce {
 
   0%,
@@ -272,7 +265,6 @@
   }
 }
 
-/* Asegúrate de que la sección de proyectos se vea bien */
 .proyectos-container {
   display: flex;
   flex-direction: column;
@@ -280,9 +272,6 @@
 }
 
 
-
-
-/* Para ajustar la descripción en pantallas más pequeñas */
 @media (max-width: 768px) {
   .proyecto-description {
     width: 90%;

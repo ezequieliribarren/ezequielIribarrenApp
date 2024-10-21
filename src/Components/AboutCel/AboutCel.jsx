@@ -8,44 +8,46 @@ const AboutCel = () => {
     const aboutInfo = [
         {
             text: "Front-End Developer. Hace 3 años creando apps y sitios web.",
-            img: "images/code.png"
+            img: "images/code.svg"
         },
         {
             text: "Autodidacta en constante evolución, siempre en busca de nuevos desafíos.",
-            img: "images/book.png"
+            img: "images/code.svg"
         },
         {
             text: "Freelancer y fundador de Versa Digital (Nuestra agencia de Marketing).",
-            img: "images/code.png"
+            img: "images/code.svg"
         },
         {
             text: "Docente, brindo talleres de Desarrollo Web en Escuelas Secundarias.",
-            img: "images/book.png"
+            img: "images/code.svg"
         },
         {
             text: "Colaboro a diario con profesionales del Diseño UX/UI y Marketing.",
-            img: "images/group.png"
+            img: "images/code.svg"
         },
     ];
 
-    // Configuración del slider
+    // Configuración del slider para un slider vertical
     const settings = {
         dots: false,
         arrows: false,
         infinite: true,
-        speed: 1000,
-        slidesToShow: 1,
+        speed: 800,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4500,
-    };
+        autoplaySpeed: 4000,
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: true, 
+        centerPadding: '0px', 
 
+    };
+    
+    
     return (
         <section className='about-cel'>
-            <div className='img-about'>
-                <img src="images/img.png" alt="" />
-            </div>
-         
             <Slider {...settings} className='slider-about'>
                 {aboutInfo.map((info, index) => (
                     <div key={index} className="about-slide">

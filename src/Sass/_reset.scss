@@ -21,49 +21,54 @@ body {
 }
 
 
-    h1{
-        font-family: orbitron;
-        font-size: 3rem;
-        color: white;
-    }
-    
-    h2{
-        font-family: 'Orbitron', sans-serif;
-        font-size: 3rem !important;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        color: #00d9ff !important;
-        text-shadow: 0 0 10px #00DAA6 !important;
-    }
-    
-    p{
-        color: white;
-    }
-    
-    a{
-        color: white;
-        text-decoration: none !important;
-    }
+h1 {
+    font-family: orbitron;
+    font-size: 3rem;
+    color: white;
+}
 
-    button {
-        width: 18rem ;
-        padding: 1rem;
-        font-size: 1.4rem !important;
-        font-family: orbitron;
-        color: #fff;
-        background: linear-gradient(135deg, #8800ff, #00d9ff);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 1rem;
-        box-shadow: 0 0 15px rgba(187, 0, 255, 0.8);
-    }
-    
-    button:hover {
-        background: linear-gradient(135deg, #00d9ff, #ff00ff);
-        box-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.8);
-    }
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem !important;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #FFF !important;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.40);
+    font-family: Orbitron;
+    font-size: 22.5px;
+
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none !important;
+    font-family: roboto;
+}
+
+button {
+    width: 18rem;
+    padding: 1rem;
+    font-size: 1.4rem !important;
+    font-family: orbitron;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    border-radius: 3.75px;
+    background: #CBFC01;
+    box-shadow: 0px 0px 10px 0px rgba(203, 252, 1, 0.80);
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.8);
+}
 
 
 @font-face {
@@ -79,32 +84,37 @@ body {
 }
 
 @font-face {
-    font-family: "start";
-    src: url(/public/fonts/PressStart2P-Regular.ttf);
+    font-family: "roboto";
+    src: url(/public/fonts/Roboto-Regular.ttf);
     font-display: swap;
 }
 
 
-.fondo-main{
+
+.contenido-central-root {
     background: #08101F;
+    background-image:
+        radial-gradient(50% 50% at 100% 0%, #293F3A 0%, rgba(41, 63, 58, 0.00) 93.32%),
+        radial-gradient(50% 50% at 0% 100%, #2F6054 0%, rgba(60, 133, 115, 0.00) 96.31%);
+    background-size: cover;
 }
 
-.none-desktop{
+.none-desktop {
     display: none;
 }
 
 .hidden {
     display: none;
-  }
-  
+}
+
 
 @media (max-width: 1000px) {
 
-.none-tablet-mobile    {
-    display: none !important;
-}
+    .none-tablet-mobile {
+        display: none !important;
+    }
 
-.none-desktop{
-    display: block !important;
-}
+    .none-desktop {
+        display: block !important;
+    }
 }
