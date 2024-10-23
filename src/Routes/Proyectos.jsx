@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { proyectos } from '../proyectos';
-import ProyectosParalax from '../Components/ProyectosParalax/ProyectosParalax';
+import ProyectosSlider from '../Components/ProyectosSlider/ProyectosSlider';
 import PortfolioIntro from '../Components/PortfolioIntro/PortfolioIntro';
 import Layout from '../Layout/Layout';
 
@@ -13,9 +13,9 @@ const Proyectos = () => {
   return (
     <Layout>
       <main>
-        <PortfolioIntro  />
+        {/* <PortfolioIntro  /> */}
         <section id="proyectos-section">
-          <ProyectosParalax proyectos={proyectos} />
+          <ProyectosSlider proyectos={proyectos} />
         </section>
       </main>
     </Layout>

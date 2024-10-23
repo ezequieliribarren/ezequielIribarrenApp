@@ -114,162 +114,226 @@
 
 
 
-// PROYECTOS PARALAX
+// PROYECTOS SLIDE
 
-.proyecto-description {
-  width: 50%;
-  border-radius: 3rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s forwards;
-  background-color: #24243ed8;
-}
+.proyectos-slider-container {
+  background: #08101F;
+  background-image:
+    radial-gradient(50% 50% at 100% 0%, #293F3A 0%, rgba(41, 63, 58, 0.00) 93.32%),
+    radial-gradient(50% 50% at 0% 100%, #2F6054 0%, rgba(60, 133, 115, 0.00) 96.31%);
+  background-size: cover;
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.proyecto-parallax {
-  width: 100%;
-  height: 60rem;
-  background-size: contain !important;
 
 }
 
-.proyecto-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 600px;
-  background: rgba(0, 0, 0, 0.638);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-
-}
-
-.proyecto-content h3 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.proyecto-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.proyecto-skills img {
-  width: 40px;
-  margin: 0 10px;
-}
-
-.video-container {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 200px;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: width 1s ease, height 1s ease, bottom 1s ease;
-}
-
-.proyecto-video {
-  width: 100%;
+.protectos-slider {
   height: 100%;
-  object-fit: cover;
+
 }
 
-.proyecto-parallax:hover .video-container {
-  width: 40%;
-  height: 80%;
-  bottom: 20px;
-  right: 20px;
+.proyecto-slide {
+  transition: transform 0.7s ease-in-out;
+  padding-top: 5rem;
+
 }
 
 
-// PORTFOLIO INTRO
 
-.portfolio-intro {
+.proyectos-slider .slick-slide {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.proyectos-slider .slick-active {
+  opacity: 1;
+  /* Se vuelve visible */
+  transform: scale(1);
+  /* Escala al tamaño original */
+}
+
+
+.proyecto-slide {
+  width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #0a0f29 0%, #020510 100%);
-  color: #fff;
-  text-align: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 2rem;
+  background: transparent;
+
+
+  .card-slide {
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background: rgba(255, 255, 255, 0.20);
+  }
+
+
+
+  .video-container {
+    padding: 2rem;
+    width: 100%;
+    height: 80%;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .skills-container {
+    height: 100%;
+    width: 20%;
+    background: rgba(255, 255, 255, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+
+      li {
+        margin-top: 1rem;
+
+        img {
+          width: 5rem;
+        }
+      }
+    }
+
+  }
+
+  .card-description {
+    h2 {
+      text-align: start;
+      font-size: 2rem;
+    }
+
+    padding-top: 1rem;
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+
+
 }
 
-.intro-content h1 {
-  font-size: 48px;
-  margin-bottom: 2rem;
-}
-
-.intro-content p {
-  font-size: 18px;
-  margin-bottom: 4rem;
-}
-
-.scroll-icon {
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  /* Animación para la flecha */
-}
-
-.scroll-icon {
-  display: block;
+.project-id {
   position: absolute;
-  margin: 0 auto;
-  /* Centra la imagen */
-  width: 50px;
-  /* Ajusta el tamaño según sea necesario */
-  animation: bounce 2s infinite ease-in-out;
-  bottom: 20px;
-  right: 50%;
+  font-family: orbitron;
+  left: 2.2% !important;
+  /* Ajusta la posición horizontal según sea necesario */
+  top: 17% !important;
+  /* Ajusta la posición vertical */
+  color: #fff;
+  /* Color del texto */
+  font-size: 6rem !important;
 }
 
-@keyframes bounce {
 
-  0%,
-  100% {
-    transform: translateY(0);
-    /* Posición inicial */
-  }
 
-  50% {
-    transform: translateY(-20px);
-    /* Mueve la imagen 20px hacia arriba */
-  }
-}
-
-.scroll-icon img {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto;
-}
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.proyectos-container {
-  display: flex;
+.welcome-slide {
+  display: flex ;
   flex-direction: column;
-  align-items: center;
+  align-items: center ;
+  justify-content: center ;
+  width: 100% ;
+  height: 100vh ;
+  text-align: center ;
+
+  .card-slide {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .skills-container {
+  display: none;
+  }
+
+
+  .project-id {
+    display: none;
+  }
 }
+
+.arrow-image {
+  margin-top: 4rem !important;
+  margin: 20px auto;
+  width: 50px;
+  height: auto;
+}
+
+
+.welcome-slide h2 {
+  font-size: 3.5rem !important;
+  /* Tamaño de fuente para el título */
+  margin-bottom: 1rem;
+  /* Espacio debajo del título */
+}
+
+.welcome-slide p {
+  font-size: 1.8rem;
+  /* Tamaño de fuente para la descripción */
+  color: #ffffff;
+  /* Color del texto de la descripción */
+  font-style: italic;
+}
+
+.welcome-slide img {
+  animation: bounce 1s infinite;
+  /* Aplicar la animación de rebote */
+}
+
+
+/* Animación de rebote para la flecha */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+    /* Ajusta el tamaño del rebote */
+  }
+
+  60% {
+    transform: translateY(-8px);
+    /* Ajusta el tamaño del rebote */
+  }
+}
+
+.flecha {
+  animation: bounce 2s infinite;
+  /* La animación se repetirá indefinidamente */
+  margin-top: 20px;
+  /* Espaciado entre el texto y la flecha */
+}
+
 
 
 @media (max-width: 768px) {

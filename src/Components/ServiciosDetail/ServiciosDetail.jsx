@@ -30,9 +30,9 @@ const ServiciosDetail = () => {
                 <div className="servicios-container container">
                     {servicios.map((servicio, index) => (
                         <React.Fragment key={index}>
-                            <div className="servicio row">
+                            <div className="servicio-card row" style={{ width: '100%', margin: '1rem auto', borderRadius: '10px', background: 'rgba(255, 255, 255, 0.20)', backdropFilter: 'blur(5px)', padding: '1rem' }}>
                                 <div className="imagen col-lg-4">
-                                    <img src={servicio.imagen} alt={servicio.titulo} />
+                                    <img src={servicio.imagen} alt={servicio.titulo} style={{ borderRadius: '10px', width: '100%', height: 'auto' }} />
                                 </div>
                                 <div className="detalle col-lg-8">
                                     <h2>{servicio.titulo}</h2>
