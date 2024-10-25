@@ -7,9 +7,6 @@ const Navbar = () => {
       <div className='logo-navbar'>
     <img src="images/logo.png" alt="Logo Ezequiel Iribarren" />
       </div>
-      <div>
-        
-      </div>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

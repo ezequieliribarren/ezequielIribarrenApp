@@ -48,11 +48,13 @@
 }
 
 .image-container {
+  width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 
   img {
+    width: 100%;
     height: 100%;
     object-fit: contain;
   }
@@ -113,31 +115,25 @@
 }
 
 
-
 // PROYECTOS SLIDE
+.proyectos-section {
+  height: 100vh;
+}
 
 .proyectos-slider-container {
+  height: 100%;
   background: #08101F;
   background-image:
     radial-gradient(50% 50% at 100% 0%, #293F3A 0%, rgba(41, 63, 58, 0.00) 93.32%),
     radial-gradient(50% 50% at 0% 100%, #2F6054 0%, rgba(60, 133, 115, 0.00) 96.31%);
   background-size: cover;
-
-
-}
-
-.protectos-slider {
-  height: 100%;
+  position: relative;
 
 }
 
 .proyecto-slide {
   transition: transform 0.7s ease-in-out;
-  padding-top: 5rem;
-
 }
-
-
 
 .proyectos-slider .slick-slide {
   opacity: 0;
@@ -147,11 +143,8 @@
 
 .proyectos-slider .slick-active {
   opacity: 1;
-  /* Se vuelve visible */
   transform: scale(1);
-  /* Escala al tamaño original */
 }
-
 
 .proyecto-slide {
   width: 100%;
@@ -179,7 +172,7 @@
   .video-container {
     padding: 2rem;
     width: 100%;
-    height: 80%;
+    height: 80% !important;
 
     video {
       width: 100%;
@@ -227,32 +220,25 @@
     }
   }
 
-
-
 }
 
 .project-id {
   position: absolute;
   font-family: orbitron;
   left: 2.2% !important;
-  /* Ajusta la posición horizontal según sea necesario */
-  top: 17% !important;
-  /* Ajusta la posición vertical */
+  top: 10.5% !important;
   color: #fff;
-  /* Color del texto */
   font-size: 6rem !important;
 }
 
-
-
 .welcome-slide {
-  display: flex ;
+  display: flex;
   flex-direction: column;
-  align-items: center ;
-  justify-content: center ;
-  width: 100% ;
-  height: 100vh ;
-  text-align: center ;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
 
   .card-slide {
     background-color: transparent;
@@ -267,7 +253,7 @@
   }
 
   .skills-container {
-  display: none;
+    display: none;
   }
 
 
@@ -282,7 +268,6 @@
   width: 50px;
   height: auto;
 }
-
 
 .welcome-slide h2 {
   font-size: 3.5rem !important;
@@ -304,6 +289,12 @@
   /* Aplicar la animación de rebote */
 }
 
+.flecha {
+  animation: bounce 2s infinite;
+  /* La animación se repetirá indefinidamente */
+  margin-top: 20px;
+  /* Espaciado entre el texto y la flecha */
+}
 
 /* Animación de rebote para la flecha */
 @keyframes bounce {
@@ -327,14 +318,47 @@
   }
 }
 
-.flecha {
-  animation: bounce 2s infinite;
-  /* La animación se repetirá indefinidamente */
-  margin-top: 20px;
-  /* Espaciado entre el texto y la flecha */
+@media (max-width: 1000px) {
+  .project-id {
+    display: none;
+  }
+
+  .card-slide {
+    flex-direction: column;
+    height: 95% !important;
+
+    p {
+      margin-top: 1.5rem;
+    }
+
+  }
+
+  .skills-container {
+    width: 100% !important;
+    align-items: end !important;
+    justify-content: start !important;
+
+    ul {
+      flex-direction: row !important;
+      align-items: start !important;
+      margin: 0 !important;
+
+      h4 {
+        display: none;
+      }
+
+      li {
+        margin: 0 !important;
+
+        img {
+          width: 4rem !important;
+        }
+      }
+
+    }
+
+  }
 }
-
-
 
 @media (max-width: 768px) {
   .proyecto-description {

@@ -11,6 +11,7 @@
     width: 100%;
     z-index: 1111;
 
+}
 
     nav {
         border-radius: 50px;
@@ -79,8 +80,17 @@
         }
     }
 
+    .nav-flotante {
+        position: absolute !important;
+        top: 1.7% !important; /* Ajusta la posición vertical si es necesario */
+        left: 50%; /* Establece la posición horizontal en el 50% del contenedor */
+        transform: translateX(-50%); /* Desplaza el elemento a la izquierda por su ancho */
+        z-index: 111111111;
+    }
+    
 
-}
+
+
 
 @media (max-width: 1000px) {
     .navegacion {
@@ -97,8 +107,14 @@
         backdrop-filter: none !important;
         padding-right: 2rem !important;
 
+
         .navbar-nav {
-            justify-content: end !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin-top: 2rem;
+            border-radius: 10px;
 
         }
     }

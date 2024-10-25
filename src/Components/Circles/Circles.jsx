@@ -5,7 +5,6 @@ const Circles = () => {
      return (
           <div className='languages-container'>
                <div className='circles-container'>
-                    {/* Circles con imágenes de lenguajes */}
                     <div className="circle">
                          <img src="images/languages/html.png" alt="HTML" />
                     </div>

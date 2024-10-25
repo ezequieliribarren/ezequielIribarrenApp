@@ -45,7 +45,7 @@ export const proyectos = [
         skill4name: "React",
         skill5: "images/languages/git.png",
         skill5name: "Git",
-        video: "",
+        video: "images/proyectos/baires.mp4",
         fecha: "2024-04-22",
         destacado: true
     },
@@ -63,7 +63,7 @@ export const proyectos = [
         skill3name: "Sass",
         skill4: "images/languages/react.png",
         skill4name: "React",
-        video: "",
+        video: "images/proyectos/decoinox.mp4",
         fecha: "2024-08-16",
         destacado: true
     },
@@ -103,7 +103,7 @@ export const proyectos = [
         skill4name: "React",
         skill5: "images/languages/git.png",
         skill5name: "Git",
-        video: "",
+        video: "images/proyectos/senko.mp4",
         fecha: "2024-08-05",
         destacado: false
     },
@@ -123,7 +123,7 @@ export const proyectos = [
         skill4name: "React",
         skill5: "images/languages/git.png",
         skill5name: "Git",
-        video: "",
+        video: "images/proyectos/lusqtoff.mp4",
         fecha: "2024-09-20",
         destacado: true
     },
