@@ -4,9 +4,9 @@ const AsesoriaDesarrollador = () => {
     return (
         <section className="asesoria-section">
             <div className="container text-center" >
-                <h2>¿Sos desarrollador web?</h2>
-                <p>¿Querés arrancar un proyecto y no sabés por dónde empezar? Yo también pasé por lo mismo. Agendá una asesoría gratuita, voy a estar encantado de contribuir con mi ayuda.</p>
-                <a className="asesoria-btn" >
+                <h2>¿Necesitás ayuda?</h2>
+                <p>¿Querés arrancar un proyecto y no sabés por dónde empezar? Agendá una asesoría gratuita, voy a estar encantado de ayudarte a alcanzar lo que estás buscando.</p>
+                <a href='https://calendly.com/ezequieliribarren-info/30min' target='_blank' className="asesoria-btn" >
                     Contactame                </a>
             </div>
         </section>

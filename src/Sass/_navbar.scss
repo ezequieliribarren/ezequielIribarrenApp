@@ -82,10 +82,12 @@
 
     .nav-flotante {
         position: absolute !important;
-        top: 1.7% !important; /* Ajusta la posición vertical si es necesario */
-        left: 50%; /* Establece la posición horizontal en el 50% del contenedor */
-        transform: translateX(-50%); /* Desplaza el elemento a la izquierda por su ancho */
+        top: 0% !important; 
+        left: 50%; 
+        transform: translateX(-50%); 
         z-index: 111111111;
+        width: 100% !important;
+        background-color: #08101F;
     }
     
 
@@ -123,4 +125,19 @@
     .navbar-toggler {
         margin-left: auto;
     }
+}
+
+.navbar-toggler {
+    background-color: #CBFC01 !important; 
+    width: 6rem;
+    box-shadow: none;
+    margin-right: 1rem;
+}
+
+.navbar-toggler:hover{
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none; 
 }

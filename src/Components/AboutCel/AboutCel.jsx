@@ -12,19 +12,19 @@ const AboutCel = () => {
         },
         {
             text: "Autodidacta en constante evolución, siempre en busca de nuevos desafíos.",
-            img: "images/code.svg"
+            img: "images/me.svg"
         },
         {
             text: "Freelancer y fundador de Versa Digital (Nuestra agencia de Marketing).",
-            img: "images/code.svg"
+            img: "images/idea.svg"
         },
         {
             text: "Docente, brindo talleres de Desarrollo Web en Escuelas Secundarias.",
-            img: "images/code.svg"
+            img: "images/teacher.svg"
         },
         {
-            text: "Colaboro a diario con profesionales del Diseño UX/UI y Marketing.",
-            img: "images/code.svg"
+            text: "Trabajo en equipo con profesionales en Diseño UX/UI y Marketing.",
+            img: "images/team.svg"
         },
     ];
 

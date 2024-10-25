@@ -133,6 +133,7 @@
 
 .proyecto-slide {
   transition: transform 0.7s ease-in-out;
+
 }
 
 .proyectos-slider .slick-slide {
@@ -200,6 +201,7 @@
         margin-top: 1rem;
 
         img {
+          margin-bottom: 0.5rem;
           width: 5rem;
         }
       }
@@ -210,13 +212,15 @@
   .card-description {
     h2 {
       text-align: start;
-      font-size: 2rem;
+      font-size: 2.4rem ;
+      margin-right: 1.8rem;
     }
 
     padding-top: 1rem;
 
     p {
-      font-size: 1.4rem;
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -247,8 +251,13 @@
     align-items: center;
     width: 100%;
 
+    .welcome-center {
+      justify-content: center;
+    }
+
     h2 {
       text-align: center;
+      font-size: 3.5rem !important;
     }
   }
 
@@ -289,12 +298,19 @@
   /* Aplicar la animación de rebote */
 }
 
-.flecha {
-  animation: bounce 2s infinite;
-  /* La animación se repetirá indefinidamente */
-  margin-top: 20px;
-  /* Espaciado entre el texto y la flecha */
+.flecha-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-top: 10rem;
+  }
+
 }
+
+
 
 /* Animación de rebote para la flecha */
 @keyframes bounce {
@@ -323,20 +339,39 @@
     display: none;
   }
 
+
   .card-slide {
     flex-direction: column;
+    width: 95% !important;
     height: 95% !important;
+    margin-top: 2rem;
 
-    p {
-      margin-top: 1.5rem;
+    .card-description {
+      padding: 1rem;
+      height: 30% !important;
     }
 
+    .video-container {
+      padding: 0;
+      height: 75% !important;
+
+      video {
+        border-radius: 10px 10px 0 0;
+        object-fit: cover !important;
+
+      }
+    }
   }
 
   .skills-container {
     width: 100% !important;
+    height: auto !important;
+    position: absolute;
+    bottom: 17%;
     align-items: end !important;
     justify-content: start !important;
+    background: transparent !important;
+
 
     ul {
       flex-direction: row !important;
@@ -351,7 +386,8 @@
         margin: 0 !important;
 
         img {
-          width: 4rem !important;
+          width: 3rem !important;
+          margin: 0 0.3rem;
         }
       }
 
@@ -366,5 +402,29 @@
     /* Reducir el tamaño de la descripción en pantallas pequeñas */
   }
 
+  .title-bandera{
+    h2{
+      font-size: 1.7rem !important ;
+    }
 
+
+  }
+
+  .card-description{
+    p{
+      font-size: 1.4rem !important;
+    }
+  }
+  .skills-container {
+    bottom: 1%;
+    ul {
+      li {
+        img {
+          width: 2.2rem !important;
+        }
+      }
+
+    }
+
+  }
 }

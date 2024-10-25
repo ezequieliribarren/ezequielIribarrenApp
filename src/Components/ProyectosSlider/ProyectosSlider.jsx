@@ -10,7 +10,8 @@ const ProyectosSlider = ({ proyectos }) => {
     const location = useLocation();
     const [isMouseOverSlider, setIsMouseOverSlider] = useState(false);
     const [hashHandled, setHashHandled] = useState(false);
-    const [startTouch, setStartTouch] = useState(null); // Para rastrear la posición de inicio del toque
+    const [startTouch, setStartTouch] = useState(null);
+    const [videoType, setVideoType] = useState('video'); // Estado para manejar el tipo de video
 
     const settings = {
         dots: false,
@@ -23,6 +24,19 @@ const ProyectosSlider = ({ proyectos }) => {
         swipeToSlide: true,
         arrows: false,
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setVideoType(window.innerWidth < 768 ? 'videoCel' : 'video'); // Cambia según el tamaño de la pantalla
+        };
+
+        handleResize(); // Establece el tipo de video al montar el componente
+        window.addEventListener('resize', handleResize); // Agrega un event listener para el cambio de tamaño
+
+        return () => {
+            window.removeEventListener('resize', handleResize); // Limpia el event listener al desmontar
+        };
+    }, []);
 
     useEffect(() => {
         if (location.hash && sliderRef.current && !hashHandled) {
@@ -54,26 +68,22 @@ const ProyectosSlider = ({ proyectos }) => {
         };
     }, [isMouseOverSlider]);
 
-    // Manejo de eventos táctiles
     const handleTouchStart = (event) => {
-        setStartTouch(event.touches[0].clientY); // Guardar la posición Y inicial del toque
+        setStartTouch(event.touches[0].clientY);
     };
 
     const handleTouchMove = (event) => {
-        if (!startTouch) return; // Asegurarse de que tenemos una posición de inicio
+        if (!startTouch) return;
 
         const currentTouch = event.touches[0].clientY;
         const distance = startTouch - currentTouch;
 
-        // Si se mueve hacia arriba, consideramos un "swipe" hacia arriba
         if (distance > 50) {
-            sliderRef.current.slickNext(); // Cambia a la siguiente diapositiva
-            setStartTouch(null); // Reiniciar el toque
-        }
-        // Si se mueve hacia abajo, consideramos un "swipe" hacia abajo
-        else if (distance < -50) {
-            sliderRef.current.slickPrev(); // Cambia a la diapositiva anterior
-            setStartTouch(null); // Reiniciar el toque
+            sliderRef.current.slickNext();
+            setStartTouch(null);
+        } else if (distance < -50) {
+            sliderRef.current.slickPrev();
+            setStartTouch(null);
         }
     };
 
@@ -84,10 +94,10 @@ const ProyectosSlider = ({ proyectos }) => {
             className="proyectos-slider-container"
             onMouseEnter={() => setIsMouseOverSlider(true)}
             onMouseLeave={() => setIsMouseOverSlider(false)}
-            onTouchStart={handleTouchStart} // Añadir evento para el inicio del toque
-            onTouchMove={handleTouchMove}   // Añadir evento para mover el toque
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
         >
-          <NavFlotante/>
+            <NavFlotante />
             <Slider {...settings} ref={sliderRef} className="proyectos-slider">
                 {proyectos.map((proyecto) => (
                     <div key={proyecto.id} className={`proyecto-slide ${proyecto.className}`} style={{ position: 'relative' }}>
@@ -96,10 +106,10 @@ const ProyectosSlider = ({ proyectos }) => {
                         </div>
                         <div className="card-slide">
                             <div className="video-container">
-                                {proyecto.video && (
+                                {proyecto[videoType] && ( // Utiliza el tipo de video basado en el tamaño de la pantalla
                                     <video
                                         className="proyecto-video"
-                                        src={proyecto.video}
+                                        src={proyecto[videoType]}
                                         autoPlay
                                         muted
                                         loop
@@ -108,8 +118,15 @@ const ProyectosSlider = ({ proyectos }) => {
                                     />
                                 )}
                                 <div className="card-description">
-                                    <h2>{proyecto.title}</h2>
-                                    <p>{proyecto.description}</p>
+                                    <div className="d-flex align-items-center title-bandera welcome-center">
+                                        <h2>{proyecto.title}</h2>
+                                        <img src={proyecto.bandera} alt="" />
+                                    </div>
+                                    {proyecto.description.includes("<") ? (
+                                        <p dangerouslySetInnerHTML={{ __html: proyecto.description }} />
+                                    ) : (
+                                        <p>{proyecto.description}</p>
+                                    )}
                                 </div>
                             </div>
                             <div className="skills-container">
@@ -120,6 +137,10 @@ const ProyectosSlider = ({ proyectos }) => {
                                     <h4>{proyecto.skill2name}</h4>
                                     {proyecto.skill3 && <li><img src={proyecto.skill3} alt={proyecto.skill3name} title={proyecto.skill3name} /></li>}
                                     <h4>{proyecto.skill3name}</h4>
+                                    {proyecto.skill4 && <li><img src={proyecto.skill4} alt={proyecto.skill4name} title={proyecto.skill4name} /></li>}
+                                    <h4>{proyecto.skill4name}</h4>
+                                    {proyecto.skill5 && <li><img src={proyecto.skill5} alt={proyecto.skill5name} title={proyecto.skill5name} /></li>}
+                                    <h4>{proyecto.skill5name}</h4>
                                 </ul>
                             </div>
                         </div>
