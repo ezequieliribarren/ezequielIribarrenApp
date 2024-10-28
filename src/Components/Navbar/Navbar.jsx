@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='navegacion'>
       <div className='logo-navbar'>
-    <img src="images/logo.png" alt="Logo Ezequiel Iribarren" />
+        <img src="images/logo.png" alt="Logo Ezequiel Iribarren" />
       </div>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
@@ -13,8 +13,10 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav"> 
+              <li><img src="images/logo.png" alt="" /></li>
               <li className="nav-item">
+               
                 <Link className="nav-link" to="/">Inicio</Link>
               </li>
               <li className="nav-item">
@@ -26,6 +28,15 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link" smooth to="/contacto">Contacto</Link>
               </li>
+              <li>  <a className="nav-link" href="https://www.linkedin.com">
+                <img src="images/linkedin.png" alt="LinkedIn" />
+              </a>
+                <a className="nav-link" href="https://www.linkedin.com">
+                  <img src="images/instagram.png" alt="LinkedIn" />
+                </a>
+                <a className="nav-link" href="https://www.github.com">
+                  <img src="images/github.png" alt="GitHub" />
+                </a></li>
             </ul>
           </div>
         </div>

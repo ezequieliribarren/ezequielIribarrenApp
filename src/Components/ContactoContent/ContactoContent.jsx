@@ -5,7 +5,7 @@ import Formulario from '../Formulario/Formulario'
 
 const ContactoContent = () => {
     return (
-        <section id='contacto'>
+        <section className='container-fluid' id='contacto'>
             <div className='row'>
                 <div className='col-lg-6'>
                     <Formulario />
